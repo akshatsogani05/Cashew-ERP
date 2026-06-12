@@ -1,0 +1,19 @@
+# Node
+frontend/node_modules/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment
+backend/.env
+
+# VS Code
+.vscode/
+
+# React Build
+frontend/build/
+
+# Logs
+*.log

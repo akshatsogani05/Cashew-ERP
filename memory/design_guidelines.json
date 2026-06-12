@@ -1,0 +1,120 @@
+
+Action: file_editor create /app/design_guidelines.json --file-text "{
+  \"project_name\": \"Cashew ERP\",
+  \"theme\": \"light\",
+  \"archetype\": \"4 (Swiss & High-Contrast)\",
+  \"emotional_tone\": \"Authoritative, Reliable, Data-First, Professional\",
+  \"color_palette\": {
+    \"primary\": \"#0F172A\",
+    \"secondary\": \"#475569\",
+    \"success\": \"#22C55E\",
+    \"warning\": \"#F59E0B\",
+    \"danger\": \"#EF4444\",
+    \"background\": \"#FFFFFF\",
+    \"surface\": \"#F8FAFC\",
+    \"border\": \"#E2E8F0\",
+    \"sidebar_bg\": \"#0F172A\",
+    \"sidebar_text\": \"#CBD5E1\",
+    \"sidebar_active\": \"#1E293B\",
+    \"text_main\": \"#0F172A\",
+    \"text_muted\": \"#64748B\"
+  },
+  \"typography\": {
+    \"font_heading\": \"'Chivo', sans-serif\",
+    \"font_body\": \"'Manrope', sans-serif\",
+    \"rules\": {
+      \"h1\": \"text-3xl sm:text-4xl font-bold tracking-tight text-slate-900\",
+      \"h2\": \"text-xl sm:text-2xl font-bold tracking-tight text-slate-900\",
+      \"h3\": \"text-lg font-semibold text-slate-800\",
+      \"body\": \"text-sm sm:text-base leading-relaxed text-slate-700\",
+      \"labels\": \"text-xs font-bold uppercase tracking-[0.1em] text-slate-500\",
+      \"numbers\": \"font-heading font-bold tabular-nums tracking-tight\"
+    },
+    \"imports\": [
+      \"@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&family=Manrope:wght@400;500;600;700&display=swap');\"
+    ]
+  },
+  \"layout_and_spacing\": {
+    \"strategy\": \"The 'Control Room' Grid (Mode B). Dense, Data-first, high-contrast hierarchical layouts. No unnecessary white space, but generous padding within cards to prevent data collision.\",
+    \"sidebar\": \"w-64 fixed inset-y-0 left-0 bg-slate-900 text-slate-300 flex flex-col z-50\",
+    \"topbar\": \"h-16 border-b border-slate-200 bg-white flex items-center justify-between px-6 sticky top-0 z-40\",
+    \"main_content\": \"ml-64 p-6 md:p-8 bg-slate-50 min-h-screen\",
+    \"grid_system\": \"grid grid-cols-1 md:grid-cols-4 gap-6\",
+    \"container_padding\": \"p-6\",
+    \"radii\": {
+      \"card\": \"rounded-lg\",
+      \"button\": \"rounded-md\",
+      \"input\": \"rounded-md\"
+    }
+  },
+  \"surface_strategies\": {
+    \"cards\": \"bg-white border border-slate-200 shadow-sm transition-shadow hover:shadow-md\",
+    \"alerts\": \"bg-white border-l-4 shadow-sm\",
+    \"glassmorphism\": \"Avoid in dashboards for readability. Stick to solid backgrounds with sharp borders.\",
+    \"tables\": \"Dense rows, left-aligned text, right-aligned numbers, sticky headers.\"
+  },
+  \"components\": {
+    \"buttons\": {
+      \"primary\": \"bg-slate-900 hover:bg-slate-800 text-white font-medium px-4 py-2 rounded-md transition-colors\",
+      \"secondary\": \"bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-medium px-4 py-2 rounded-md transition-colors\",
+      \"danger\": \"bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-md transition-colors\"
+    },
+    \"kpi_cards\": {
+      \"structure\": \"flex flex-col p-6 bg-white border border-slate-200 rounded-lg shadow-sm\",
+      \"title\": \"text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2\",
+      \"value\": \"text-3xl font-heading font-bold text-slate-900\",
+      \"trend_up\": \"flex items-center text-sm font-medium text-green-600 mt-2\",
+      \"trend_down\": \"flex items-center text-sm font-medium text-red-600 mt-2\"
+    },
+    \"badges\": {
+      \"success\": \"bg-green-100 text-green-800 border border-green-200 px-2.5 py-0.5 rounded-full text-xs font-semibold\",
+      \"warning\": \"bg-amber-100 text-amber-800 border border-amber-200 px-2.5 py-0.5 rounded-full text-xs font-semibold\",
+      \"danger\": \"bg-red-100 text-red-800 border border-red-200 px-2.5 py-0.5 rounded-full text-xs font-semibold\",
+      \"neutral\": \"bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-0.5 rounded-full text-xs font-semibold\"
+    },
+    \"charts\": {
+      \"library\": \"recharts\",
+      \"usage\": \"Use crisp, high-contrast lines. Colors should align with the palette. Remove default Recharts grid lines or make them very subtle (stroke='#F1F5F9'). Tooltips must have solid white backgrounds with a slate border.\"
+    }
+  },
+  \"icons\": {
+    \"library\": \"lucide-react\",
+    \"installation\": \"npm install lucide-react or yarn add lucide-react\",
+    \"usage\": \"Use 20px size for sidebar icons (strokeWidth 2). Use 16px size for inline buttons. Use 24px for KPI card visual anchors.\"
+  },
+  \"media\": {
+    \"images\": {
+      \"login_background\": {
+        \"url\": \"https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwaW50ZXJpb3IlMjBpbmR1c3RyaWFsfGVufDB8fHx8MTc4MTIyOTY5Nnww&ixlib=rb-4.1.0&q=85\",
+        \"description\": \"Industrial factory interior for auth page split screen.\"
+      },
+      \"cashew_placeholder\": {
+        \"url\": \"https://images.unsplash.com/photo-1615485925873-7ecbbe90a866?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjYXNoZXclMjBudXR8ZW58MHx8fHwxNzgxMjI5Njk2fDA&ixlib=rb-4.1.0&q=85\",
+        \"description\": \"Raw cashew nuts for product/inventory mockups.\"
+      }
+    }
+  },
+  \"motion_and_interactions\": {
+    \"hover_states\": \"All interactive elements must visibly change on hover. Buttons darken, rows gain bg-slate-50, cards lift slightly (-translate-y-0.5) with shadow-md.\",
+    \"focus_states\": \"focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2\",
+    \"transitions\": \"transition-all duration-200 ease-in-out\"
+  },
+  \"accessibility\": {
+    \"contrast\": \"Text must meet minimum 4.5:1 ratio. White text on primary slate-900 background is highly accessible.\",
+    \"test_attributes\": \"All interactive elements (buttons, inputs, menu items, table rows) must include descriptive data-testid attributes (e.g., data-testid='sidebar-nav-production', data-testid='kpi-health-score').\",
+    \"aria\": \"Use aria-labels for icon-only buttons.\"
+  },
+  \"instructions_to_main_agent\": [
+    \"1. Setup standard React/Vite/Tailwind project. Install lucide-react and recharts.\",
+    \"2. Add the custom fonts (Chivo and Manrope) to your CSS/HTML.\",
+    \"3. Build a persistent Layout component containing the dark sidebar (bg-slate-900) and top header.\",
+    \"4. Implement the Dashboard view utilizing a CSS Grid (grid-cols-4 for KPI cards).\",
+    \"5. The Factory Health Score should be a prominent, color-coded widget (Green/Amber/Red based on status).\",
+    \"6. Include mock widgets for Production Trends (Line Chart), Recent Orders (Table), and Alerts (List with Warning/Danger colors).\",
+    \"7. Ensure the entire layout works correctly on mobile by making the sidebar toggleable and stacking grid items.\",
+    \"8. Strictly follow the color palette. Do not inject arbitrary colors like purple or teal.\",
+    \"9. Use Shadcn-like clean components (create your own using Tailwind if Shadcn is not pre-installed, relying on raw HTML+Tailwind for precise layout).\",
+    \"10. Include 'data-testid' on all major components, buttons, and links.\"
+  ]
+}"
+Observation: Create successful: /app/design_guidelines.json
